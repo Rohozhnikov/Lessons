@@ -25,6 +25,8 @@ public class EmployeeInfo {
 		emps.add(new Employee("Joe", 100000));
 		emps.add(new Employee("Tim", 50000));
 		emps.add(new Employee("Andy", 60000));
+		emps.add(new Employee("Andy", 80000));
+		emps.add(new Employee("Andy", 100000));
 		EmployeeInfo ei = new EmployeeInfo(EmployeeInfo.SortMethod.BYNAME);
 		ei.sort(emps);
 		System.out.println(emps);
