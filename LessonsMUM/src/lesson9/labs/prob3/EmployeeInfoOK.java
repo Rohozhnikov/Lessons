@@ -9,7 +9,7 @@ import java.util.List;
 public class EmployeeInfoOK {
 	static enum SortMethod {BYNAME, BYSALARY};
 	
-	HashMap<String, Em>
+//	HashMap<String, Em>
 	
 	public void sort(List<Employee> emps, final SortMethod method) {
 		
