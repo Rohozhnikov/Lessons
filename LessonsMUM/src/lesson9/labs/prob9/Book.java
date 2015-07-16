@@ -22,4 +22,15 @@ public class Book {
 		BookCopy copy = new BookCopy(this, copies.size() + 1, true);
 		copies.add(copy);
 	}
+	boolean isAvailable(){
+		
+		return copies.stream().map(c-> c.isAvailable()).reduce((a,b) -> a||b).get();
+	}
+	
+	public static void main(String[] args) {
+		Book book  = new Book("test", 3);
+		List<BookCopy> copies = book.getCopies();
+		copies.forEach(c -> c.changeAvailability());
+		System.out.println(book.isAvailable());
+	}
 }

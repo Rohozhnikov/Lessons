@@ -2,6 +2,7 @@ package lesson9.labs.prob7a;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Main {
@@ -25,9 +26,15 @@ public class Main {
 			IntStream zeroToNinetyNine1 = IntStream.rangeClosed(0, 100);
 			System.out.println(zeroToNinetyNine1.toString());
 			
-			ones.forEach(System.out::println);
+//			ones.forEach(System.out::println);
 		//your stream pipeline here
-
+			
+			System.out.println("-----2--");
+			System.out.println(list.stream()
+			.filter(s ->s.salary > 100000)
+			.filter(s ->s.lastName.charAt(0)>'M')
+			.map(s -> s.firstName+" "+s.lastName)
+			.collect(Collectors.joining(", ")));
 	}
 
 }
